@@ -1,0 +1,252 @@
+/* Color Palette & Variables */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --tag-bg: #0f172a;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Reset & Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    direction: ltr;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 25px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: #0f172a;
+}
+
+.primary-btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Cards & Layout */
+main {
+    padding: 40px 0;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.about-text {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+/* Skills Section */
+.skills-group {
+    margin-bottom: 20px;
+}
+
+.skills-group:last-child {
+    margin-bottom: 0;
+}
+
+.skills-group h3 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: var(--tag-bg);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    border: 1px solid var(--border-color);
+}
+
+.tag.highlight {
+    border-color: var(--accent-color);
+    color: var(--text-primary);
+}
+
+/* Experience Section */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.exp-header h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.exp-date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    background-color: var(--tag-bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.exp-bullets {
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.exp-bullets li {
+    margin-bottom: 8px;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.contact-item {
+    background-color: var(--tag-bg);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.contact-item .value {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.contact-item a.value:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .name {
+        font-size: 2rem;
+    }
+    .card {
+        padding: 20px;
+    }
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}

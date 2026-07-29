@@ -12,14 +12,18 @@
 <body>
 
     <header class="hero">
-        <div class="container">
-            <h1 class="name">Ahmad Zaatar</h1>
-            <p class="title">Node.js Back-End Developer</p>
-            <p class="subtitle">Software Engineer with 3 years of experience specializing in robust server-side architecture, API development, and database management.</p>
+        <div class="container">            
+            <div class="avatar-container">
+                <img id="profile-img" src="" alt="Ahmad Zaatar" class="avatar">
+            </div>
+            
+            <h1 class="name" id="user-name"></h1>
+            <p class="title" id="user-title"></p>
+            <p class="subtitle" id="user-subtitle"></p>
             
             <div class="cta-buttons">
                 <a href="#contact" class="btn primary-btn">Contact Me</a>
-                <a href="https://github.com/AhmedZaatar" target="_blank" rel="noopener" class="btn secondary-btn">GitHub Profile</a>
+                <a id="github-btn" href="" target="_blank" rel="noopener" class="btn secondary-btn">GitHub Profile</a>
             </div>
         </div>
     </header>
@@ -29,9 +33,7 @@
         <!-- About Section -->
         <section class="card">
             <h2>About Me</h2>
-            <p class="about-text">
-                Dedicated Software Engineer with 3+ years of professional experience focusing on Back-End development using Node.js. Skilled in designing clean database architectures, building scalable RESTful APIs, and implementing high-precision business logic on the server side. Additionally experienced in front-end fundamentals using React.js and Vue.js.
-            </p>
+            <p class="about-text" id="user-about"></p>
         </section>
 
         <!-- Technical Skills Section -->
@@ -70,42 +72,58 @@
             </div>
         </section>
 
-        <!-- Work Experience Section -->
+        <!-- Professional Experience Section -->
         <section class="card">
             <h2>Professional Experience</h2>
+            
+            <!-- Minarets Company Item -->
             <div class="experience-item">
                 <div class="exp-header">
-                    <h3>Back-End Developer (Node.js)</h3>
-                    <span class="exp-date">3 Years Experience</span>
+                    <h3><span id="company-role"></span> - <strong id="company-name" class="company-highlight"></strong></h3>
+                    <span class="exp-date" id="company-dates"></span>
                 </div>
                 <ul class="exp-bullets">
-                    <li>Designed and maintained secure, high-performance RESTful APIs to power web applications.</li>
-                    <li>Architected relational database schemas and optimized complex SQL queries for maximum throughput.</li>
-                    <li>Implemented complex server-side business logic and precision calculation modules.</li>
-                    <li>Collaborated on front-end integration using React.js and Vue.js to deliver seamless end-to-end features.</li>
+                    <li>Developing and maintaining robust Node.js Back-End services and enterprise RESTful APIs.</li>
+                    <li>Designing, optimizing, and managing relational databases to ensure high availability and efficient query execution.</li>
+                    <li>Handling complex business logic and server-side integrations for core organizational applications.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" style="margin-top: 25px;">
+                <div class="exp-header">
+                    <h3>Overall Back-End Experience</h3>
+                    <span class="exp-date">3+ Years Total</span>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Built scalable server architectures and secure API endpoints across various projects.</li>
+                    <li>Collaborated with front-end teams (React.js / Vue.js) to deliver seamless end-to-end features.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact & Personal Details Section -->
         <section class="card" id="contact">
-            <h2>Contact Information</h2>
+            <h2>Personal & Contact Details</h2>
             <div class="contact-grid">
                 <div class="contact-item">
+                    <span class="label">Birth Date</span>
+                    <span class="value" id="user-birth"></span>
+                </div>
+                <div class="contact-item">
                     <span class="label">Email</span>
-                    <a href="mailto:ahmerzaatar1999@gmail.com" class="value">ahmerzaatar1999@gmail.com</a>
+                    <a id="user-email" href="" class="value"></a>
                 </div>
                 <div class="contact-item">
                     <span class="label">Phone (Primary)</span>
-                    <span class="value">+963 993 577 995</span>
+                    <span class="value" id="user-phone-1"></span>
                 </div>
                 <div class="contact-item">
                     <span class="label">Phone (Secondary)</span>
-                    <span class="value">+963 948 528 132</span>
+                    <span class="value" id="user-phone-2"></span>
                 </div>
                 <div class="contact-item">
                     <span class="label">GitHub</span>
-                    <a href="https://github.com/AhmedZaatar" target="_blank" rel="noopener" class="value">github.com/AhmedZaatar</a>
+                    <a id="user-github" href="" target="_blank" rel="noopener" class="value"></a>
                 </div>
             </div>
         </section>
@@ -115,6 +133,7 @@
     <footer>
         <p>© 2026 Ahmad Zaatar. All rights reserved.</p>
     </footer>
-
+    
+    <script src="script.js"></script>
 </body>
 </html>

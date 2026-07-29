@@ -50,11 +50,22 @@ body {
     color: var(--accent-color);
 }
 
-/* Hero Section */
+/* Hero Section - Layout جانبي */
 .hero {
     padding: 60px 0 40px;
-    text-align: center;
     border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-text {
+    text-align: left;
+    flex: 1;
 }
 
 .name {
@@ -74,10 +85,52 @@ body {
 .subtitle {
     color: var(--text-secondary);
     max-width: 600px;
-    margin: 0 auto 25px;
+    margin-bottom: 25px;
     font-size: 1rem;
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+/* تكبير الصورة وزيادة وضوحها */
+.avatar-container {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+@media (max-width: 650px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+}
 /* Buttons */
 .cta-buttons {
     display: flex;

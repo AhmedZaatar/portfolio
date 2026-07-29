@@ -12,18 +12,20 @@
 <body>
 
     <header class="hero">
-        <div class="container">            
+        <div class="container hero-content">            
             <div class="avatar-container">
                 <img id="profile-img" src="" alt="Ahmad Zaatar" class="avatar">
             </div>
-            
-            <h1 class="name" id="user-name"></h1>
-            <p class="title" id="user-title"></p>
-            <p class="subtitle" id="user-subtitle"></p>
-            
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary-btn">Contact Me</a>
-                <a id="github-btn" href="" target="_blank" rel="noopener" class="btn secondary-btn">GitHub Profile</a>
+                        
+            <div class="hero-text">
+                <h1 class="name" id="user-name"></h1>
+                <p class="title" id="user-title"></p>
+                <p class="subtitle" id="user-subtitle"></p>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a id="github-btn" href="" target="_blank" rel="noopener" class="btn secondary-btn">GitHub Profile</a>
+                </div>
             </div>
         </div>
     </header>
@@ -69,6 +71,35 @@
                     <span class="tag">Git & GitHub</span>
                     <span class="tag">HTML5 / CSS3</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="card">
+            <h2>Featured Projects</h2>
+
+            <!-- ERP System -->
+            <div class="experience-item" style="margin-bottom: 25px;">
+                <div class="exp-header">
+                    <h3>Enterprise Resource Planning (ERP) System</h3>
+                    <a href="https://demo.dbco.me/" target="_blank" rel="noopener" class="exp-date" style="text-decoration: none;">Live Demo ↗</a>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Engineered comprehensive back-end modules handling core business workflows, data processing, and transaction management.</li>
+                    <li>Designed normalized database structures (3NF) to ensure data integrity and query performance under heavy organizational load.</li>
+                </ul>
+            </div>
+
+            <!-- Money Exchange App -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Money Exchange Application</h3>
+                    <a href="https://exchanging.dbco.me/" target="_blank" rel="noopener" class="exp-date" style="text-decoration: none;">Live Demo ↗</a>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Developed backend APIs for handling currency conversion calculations, transaction tracking, and exchange rate updates.</li>
+                    <li>Implemented secure endpoints to support multi-currency operations and accurate ledger records.</li>
+                </ul>
             </div>
         </section>
 
